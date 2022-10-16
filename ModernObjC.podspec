@@ -21,11 +21,22 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/nzrsky/ModernObjC.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/nzrsky'
 
-  s.platform = :osx
   s.osx.deployment_target = "10.10"
   s.ios.deployment_target = '10.0'
   s.tvos.deployment_target = '10.0'
   s.watchos.deployment_target = '5.0'
+
+  pch_TARGETS = <<-EOS
+#ifndef TARGET_OS_IOS
+  #define TARGET_OS_IOS TARGET_OS_IPHONE
+#endif
+#ifndef TARGET_OS_WATCH
+  #define TARGET_OS_WATCH 0
+#endif
+#ifndef TARGET_OS_TV
+  #define TARGET_OS_TV 0
+#endif
+EOS
 
   s.source_files = 'ModernObjC/Classes/**/*.{m,h}'
   s.frameworks = 'Foundation'
