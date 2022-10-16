@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ModernObjC'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'Header-only ObjC modernization pack'
 
   s.description      = <<-DESC
@@ -27,8 +27,7 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = '10.0'
   s.watchos.deployment_target = '5.0'
 
-  s.source_files = 'ModernObjC/Classes/**/*'
-  s.public_header_files = 'ModernObjC/Classes/**/*.h'
+  s.source_files = 'ModernObjC/Classes/**/*.{m,h}'
   s.frameworks = 'Foundation'
   s.requires_arc = true
 

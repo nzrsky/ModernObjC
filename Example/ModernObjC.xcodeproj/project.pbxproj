@@ -30,7 +30,7 @@
 		0BA93ED7D8D78AAF29B61C06 /* Pods-ModernObjC_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModernObjC_Example.debug.xcconfig"; path = "Target Support Files/Pods-ModernObjC_Example/Pods-ModernObjC_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		396671A07DECE96F06159D82 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		63446C685F9349D9B614FDA3 /* Pods-ModernObjC_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModernObjC_Tests.release.xcconfig"; path = "Target Support Files/Pods-ModernObjC_Tests/Pods-ModernObjC_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		6A4EBCBC883EC72ADD1E19DF /* ModernObjC.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ModernObjC.podspec; path = ../ModernObjC.podspec; sourceTree = "<group>"; };
+		6A4EBCBC883EC72ADD1E19DF /* ModernObjC.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ModernObjC.podspec; path = ../ModernObjC.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		8AC16722E0AADD0C2D3069C1 /* Pods-ModernObjC_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModernObjC_Example.release.xcconfig"; path = "Target Support Files/Pods-ModernObjC_Example/Pods-ModernObjC_Example.release.xcconfig"; sourceTree = "<group>"; };
 		9FD6C656B61D2F37A094EA22 /* Pods_ModernObjC_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ModernObjC_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD3949F9FE5A02AA3CB6C075 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -152,6 +152,7 @@
 				ED83F67420348A760038D96B /* Sources */,
 				ED83F67520348A760038D96B /* Frameworks */,
 				ED83F67620348A760038D96B /* Resources */,
+				E04286FC74525D8CC393C888 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -284,6 +285,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E04286FC74525D8CC393C888 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ModernObjC_Example/Pods-ModernObjC_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ModernObjC/ModernObjC.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/ModernObjC.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ModernObjC_Example/Pods-ModernObjC_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -485,7 +504,6 @@
 			baseConfigurationReference = EDF3B561A01183D33D57ED7D /* Pods-ModernObjC_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_UNDEFINED_BEHAVIOR_SANITIZER_NULLABILITY = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -496,7 +514,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.ModernObjC-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ModernObjC_Example.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ModernObjC_Example";
 			};
 			name = Debug;
 		};
@@ -505,7 +523,6 @@
 			baseConfigurationReference = 63446C685F9349D9B614FDA3 /* Pods-ModernObjC_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_UNDEFINED_BEHAVIOR_SANITIZER_NULLABILITY = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -516,7 +533,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.ModernObjC-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ModernObjC_Example.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ModernObjC_Example";
 			};
 			name = Release;
 		};

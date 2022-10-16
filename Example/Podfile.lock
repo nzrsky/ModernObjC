@@ -1,5 +1,5 @@
 PODS:
-  - ModernObjC (0.1.0)
+  - ModernObjC (0.1.1)
 
 DEPENDENCIES:
   - ModernObjC (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ModernObjC: fe1ed2434b1b79c184f03a38a6b4a11da9616970
+  ModernObjC: 58ee81155fe751235e3fc6123da8ca607e63d8f0
 
-PODFILE CHECKSUM: a4be2cd9251e7d80b2ccaeccb6a25f83bd819a14
+PODFILE CHECKSUM: 8630ffbc4896c33702e2f33d20c3a97e5c6fc994
 
 COCOAPODS: 1.11.3

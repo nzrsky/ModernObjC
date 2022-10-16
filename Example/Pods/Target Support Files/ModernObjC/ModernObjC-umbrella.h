@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "ModernObjC.h"
 
 FOUNDATION_EXPORT double ModernObjCVersionNumber;
 FOUNDATION_EXPORT const unsigned char ModernObjCVersionString[];

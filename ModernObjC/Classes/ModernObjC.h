@@ -5,6 +5,9 @@
 #ifndef ModernObjC_H
 #define ModernObjC_H
 
+@interface ModernObjC_dummy : NSObject
+@end
+
 //
 // Modifiers
 //

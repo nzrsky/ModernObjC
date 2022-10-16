@@ -3,7 +3,10 @@
 //
 
 import Cocoa
+import ModernObjC
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
+    func foo() {
+    }
 }

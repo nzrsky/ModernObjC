@@ -1,5 +1,5 @@
 @import XCTest;
-#import <ModernObjC/ModernObjC.h>
+@import ModernObjC;
 
 // OVERLOADABLE works, no warnings
 void foo(int x) OVERLOADABLE {}

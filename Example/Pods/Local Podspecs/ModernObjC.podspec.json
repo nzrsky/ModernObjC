@@ -1,6 +1,6 @@
 {
   "name": "ModernObjC",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "summary": "Header-only ObjC modernization pack",
   "description": "It adds lets, vars and typed copy/foreach functions for ObjC collections",
   "homepage": "https://github.com/nzrsky/ModernObjC",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/nzrsky/ModernObjC.git",
-    "tag": "0.1.0"
+    "tag": "0.1.1"
   },
   "social_media_url": "https://twitter.com/nzrsky",
   "platforms": {
@@ -22,8 +22,7 @@
     "tvos": "10.0",
     "watchos": "5.0"
   },
-  "source_files": "ModernObjC/Classes/**/*",
-  "public_header_files": "ModernObjC/Classes/**/*.h",
+  "source_files": "ModernObjC/Classes/**/*.{m,h}",
   "frameworks": "Foundation",
   "requires_arc": true,
   "xcconfig": {
