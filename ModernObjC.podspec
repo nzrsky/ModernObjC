@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ModernObjC'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'Header-only ObjC modernization pack'
 
   s.description      = <<-DESC
