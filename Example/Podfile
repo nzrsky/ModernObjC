@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ModernObjC_Example' do
+  pod 'ModernObjC', :path => '../'
+
+  target 'ModernObjC_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
