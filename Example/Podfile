@@ -5,7 +5,5 @@ target 'ModernObjC_Example' do
 
   target 'ModernObjC_Tests' do
     inherit! :search_paths
-
-    
   end
 end

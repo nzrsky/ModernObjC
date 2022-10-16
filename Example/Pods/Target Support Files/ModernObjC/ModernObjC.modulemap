@@ -1,0 +1,6 @@
+framework module ModernObjC {
+  umbrella header "ModernObjC-umbrella.h"
+
+  export *
+  module * { export * }
+}

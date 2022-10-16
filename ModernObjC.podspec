@@ -9,35 +9,30 @@
 Pod::Spec.new do |s|
   s.name             = 'ModernObjC'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of ModernObjC.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+  s.summary          = 'Header-only ObjC modernization pack'
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  It adds lets, vars and typed copy/foreach functions for ObjC collections
+  DESC
 
-  s.homepage         = 'https://github.com/Rogaven/ModernObjC'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/nzrsky/ModernObjC'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Rogaven' => 'alexx.nazaroff@gmail.com' }
-  s.source           = { :git => 'https://github.com/Rogaven/ModernObjC.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { 'Alexey Nazarov' => 'alexx.nazaroff@gmail.com' }
+  s.source           = { :git => 'https://github.com/nzrsky/ModernObjC.git', :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/nzrsky'
 
   s.platform = :osx
   s.osx.deployment_target = "10.10"
+  s.ios.deployment_target = '10.0'
+  s.tvos.deployment_target = '10.0'
+  s.watchos.deployment_target = '5.0'
 
   s.source_files = 'ModernObjC/Classes/**/*'
+  s.public_header_files = 'ModernObjC/Classes/**/*.h'
+  s.frameworks = 'Foundation'
+  s.requires_arc = true
 
-  # s.resource_bundles = {
-  #   'ModernObjC' => ['ModernObjC/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'Cocoa'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.xcconfig = {
+    'WARNING_CFLAGS' => '-Wno-auto-var-id'
+  }
 end
