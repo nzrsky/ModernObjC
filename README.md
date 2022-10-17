@@ -1,9 +1,11 @@
 # ModernObjC
 
-[![CI Status](https://img.shields.io/travis/nzrsky/ModernObjC.svg?style=flat)](https://app.travis-ci.com/nzrsky//ModernObjC)
-[![Version](https://img.shields.io/cocoapods/v/ModernObjC.svg?style=flat)](https://cocoapods.org/pods/ModernObjC)
-[![License](https://img.shields.io/cocoapods/l/ModernObjC.svg?style=flat)](https://cocoapods.org/pods/ModernObjC)
-[![Platform](https://img.shields.io/cocoapods/p/ModernObjC.svg?style=flat)](https://cocoapods.org/pods/ModernObjC)
+[![Build Status](https://app.travis-ci.com/nzrsky/ModernObjC.svg?branch=master)](https://app.travis-ci.com/nzrsky/ModernObjC)
+[![codecov.io](https://codecov.io/github/nzrsky/ModernObjC/coverage.svg?branch=master)](https://codecov.io/github/nzrsky/ModernObjC?branch=master)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/ModernObjC.svg)](https://cocoapods.org/pods/ModernObjC)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Platform](https://img.shields.io/cocoapods/p/ModernObjC.svg?style=flat)](http://cocoadocs.org/docsets/ModernObjC)
+[![Twitter](https://img.shields.io/badge/twitter-@nzrsky-blue.svg?style=flat)](http://twitter.com/nzrsky)
 
 It adds lets, vars and typed copy/foreach functions for ObjC collections
 
